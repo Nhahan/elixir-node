@@ -1,18 +1,11 @@
 defmodule ElixirNode do
-  @moduledoc """
-  Documentation for `ElixirNode`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ElixirNode.hello()
-      :world
-
-  """
   def hello do
-    :world
+    loop()
+  end
+
+  defp loop do
+    IO.puts("Hello world")
+    Process.sleep(1000)
+    loop()
   end
 end
